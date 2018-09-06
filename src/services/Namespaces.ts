@@ -5,6 +5,11 @@ class Namespaces extends BaseService {
     return RequestHelper.get(this, 'namespaces', options);
   }
 
+  search(query) {
+    const q = encodeURIComponent(query);
+    return RequestHelper.get(this, `namespaces?search=${q}`);
+  }
+  
   show(namespaceId) {
     const nId = encodeURIComponent(namespaceId);
 
