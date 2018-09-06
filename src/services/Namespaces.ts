@@ -9,7 +9,7 @@ class Namespaces extends BaseService {
     const q = encodeURIComponent(query);
     return RequestHelper.get(this, `namespaces?search=${q}`);
   }
-  
+ 
   show(namespaceId) {
     const nId = encodeURIComponent(namespaceId);
 
